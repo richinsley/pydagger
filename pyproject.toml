@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydagger"
+version = "0.1.0"
+description = "Python library for layered Directed Acyclic Graphs with automatic topological ordering"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    {name = "Rich Insley", email = "richinsley@gmail.com"},
+]
+keywords = ["graph", "node", "dag", "directed acyclic graph", "layered graph", "topological ordering", "pipeline"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/richinsley/pydagger"
+Repository = "https://github.com/richinsley/pydagger"
+Issues = "https://github.com/richinsley/pydagger/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "build", "twine"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["pydagger*"]
+exclude = ["tests*", "daggerlib*"]
